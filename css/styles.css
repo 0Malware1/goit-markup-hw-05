@@ -507,17 +507,39 @@ ul li {
   border: 1px solid #eeeeee;
   margin-bottom: 30px;
 }
-.portfolio-elements:hover {
-  position: relative;
-  top: 0;
+.gallery-animation::after {
+  content: "Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania koronawirusa. Firmy wykorzystują tę platformę do celów szpiegowskich i ataków na niezabezpieczone serwery konkurencji";
+  position: absolute;
+  bottom: 105px;
   left: 0;
   background: #2196f3e5;
+  opacity: 0;
+  height: 0px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+
+  color: var(--sub-backgrounds3);
+  padding-left: 24px;
+  padding-right: 45px;
+
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-animation:hover::after {
   width: 370px;
   height: 294px;
+  opacity: 100%;
   box-shadow: 1px 4px 6px 0px #00000029;
   box-shadow: 0px 4px 4px 0px #0000000f;
   box-shadow: 0px 1px 1px 0px #0000001f;
 }
+
 .portfolio-elements h4 {
   margin: 0;
   padding-left: 24px;
