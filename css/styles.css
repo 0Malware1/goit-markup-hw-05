@@ -211,7 +211,7 @@ ul li {
   height: 4px;
   background-color: var(--brand-color);
 }
-.main-navigation li:active .main-navigation li::after {
+.main-navigation li:focus .main-navigation li::after {
   content: "";
   position: absolute;
   display: block;
