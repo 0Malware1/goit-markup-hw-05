@@ -13,7 +13,11 @@ body {
   color: var(--main-text-color);
   background-color: var(--sub-backgrounds3);
 }
-.mail1 {
+
+.highlighter2 {
+  fill: var(--subtext-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -21,32 +25,10 @@ body {
   fill: var(--svg-colors);
   color: #757575;
   text-decoration: none;
-}
-.mail1 svg {
-  width: 16px;
-  height: 12px;
-  fill: var(--svg-colors);
-}
-.highlighter2 {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .highlighter2:hover {
   color: var(--brand-color);
   fill: var(--brand-color);
-}
-.tel1 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  color: #757575;
-  text-decoration: none;
-}
-.tel1 svg {
-  width: 10px;
-  height: 16px;
-  fill: var(--svg-colors);
 }
 
 .icons-svg {
@@ -188,7 +170,7 @@ ul li {
 .main-navigation li {
   position: relative;
 }
-.main-navigation li::after {
+.links::after {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* 
@@ -202,7 +184,7 @@ ul li {
   height: 4px;
   background: var(--brand-color);
 } */
-.main-navigation li:focus .main-navigation li::after {
+.links--active::after {
   content: "";
   position: absolute;
   display: block;
